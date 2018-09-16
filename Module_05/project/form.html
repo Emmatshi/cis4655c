@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="mod5.html">Homepage</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+              <li><a href="#">Page 1-3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<h1>Please fill out the form to proceed</h1>
+  <form>
+    <div class="form-group">
+      <label for="validation01">Username or your personal email:</label>
+      <!--<input type="email" class="form-control" id="email">-->
+      <input type="text" class="form-control" id="validation01" placeholder="Email" required>
+      <div class="invalid-feedback">
+        This field is required.
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Enter your comments here:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+
+      <p>Please select your membership category</p></br>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Beginners</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Experienced</label>
+      </div>
+      <div class="checkbox disabled">
+        <label><input type="checkbox" value="" disabled>Talented</label>
+      </div>
+
+      <p>Only one button need to be selected.</p></br>
+      <div class="radio">
+        <label><input type="radio" name="optradio">Basics</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio">High</label>
+      </div>
+      <div class="radio disabled">
+        <label><input type="radio" name="optradio" disabled>New</label>
+      </div>
+
+      <p>Pick up options</p></br>
+      <div class="form-group">
+        <label for="select1">Select list:</label>
+        <select class="form-control" id="select1">
+          <option>Shipping</option>
+          <option>At the store</option>
+          <option>Facilities</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+
+  window.addEventListener('load', function() {
+    var form = document.getElementById('needs-validation');
+    form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  }, false);
+})();
+</script>
+
+</body>
+</html>
